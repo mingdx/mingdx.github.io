@@ -3,7 +3,7 @@ import type { SocialObjects } from "./types";
 export const SITE = {
   website: "https://mingdx.github.io",
   author: "mindx",
-  desc: "Awakening the Monster Inside",
+  desc: "Awaken the Monster Inside",
   title: "Mind Chronicles",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,

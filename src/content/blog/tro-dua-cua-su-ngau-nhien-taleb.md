@@ -50,8 +50,7 @@ họ nghĩ rằng chúng ta có thể dùng **ý chí** để **kiểm soát** b
 
 chúng ta **không hoàn hảo** và không cần phải nhọc hơi sửa chữa những khiếm khuyết của mình làm gì. Chúng ta quá khiếm khuyết và khập khiễng với môi trường sống của mình đến mức chúng ta chỉ có thể tìm cách **đi vòng qua những khiếm khuyết này** mà thôi.
 
-Ngay từ mở đầu, cuốn sách rõ ràng không tìm cách **khuyên nhủ** mọi người như thông thường, mà đơn giản chỉ ra những gì chúng ta đang không nhận ra, để **tránh**. Một phương pháp tiếp cận thực dụng.
-{: .notice--warning}
+> Ngay từ mở đầu, cuốn sách rõ ràng không tìm cách **khuyên nhủ** mọi người như thông thường, mà đơn giản chỉ ra những gì chúng ta đang không nhận ra, để **tránh**. Một phương pháp tiếp cận thực dụng.
 
 ---
 
