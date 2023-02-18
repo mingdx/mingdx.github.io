@@ -50,10 +50,13 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-h3:italic prose-p:!text-skin-base 
+    prose-h3:italic prose-p:!text-skin-base prose-p:text-lg
     prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
-    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80 prose-blockquote:bg-skin-card
+    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80 
+    prose-blockquote:!font-light prose-blockquote:!not-italic
+    prose-blockquote:bg-skin-card
+    prose-blockquote:py-1
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
 
