@@ -28,4 +28,10 @@ Hồ sơ thành tích của con khỉ, quả thật rất ấn tượng, nhưng 
 
 ### 8. Quá nhiều triệu phú nhà bên
 
-Ưu điểm của chủ nghĩa tư bản nằm ở chỗ xã hội có thể thu lợi từ lòng tham thay vì lòng nhân từ của con người.
+Sách dạy làm giàu bằng những lời nói hoa mỹ, chung chung như thời kỳ 2000 - 2010 tôi hay bắt gặp trên giá sách, không còn nhan nhản nữa, đơn giản vì độc giả họ cũng "khôn" hơn. Tiếp đó là trường phái sách "người thực việc thực", cố gắng lấy ví dụ thực tế, triệu phú này có những thói quen X, tỷ phú kia cũng có thói quen X. Từ đó cho ra đời khoảng 20 chương sách nói về những đức tính mà **bạn nên sở hữu** để trở nên giàu có.
+
+Hai sai sót trong mẫu nghiên cứu, khi chỉ đề cập tới:
+- Các con khỉ thành công, không đề cập tới những người có thói quen X nhưng đáng tiếc, ngập trong nợ nần.
+- Khung thời gian giới hạn trong 1 giai đoạn, là lúc thị trường bò. Đây cũng là một nhân tố góp phần sự thành công nhưng lại bị _thói quen X_ lấy hết công trạng.
+
+> Thông tin trong quá khứ với phép quy nạp rút ra nguyên nhân thành công cần xem xét lại: <mark>(i) hình mẫu thất bại </mark> và <mark>(ii) những nguyên nhân khác  </mark>
