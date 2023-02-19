@@ -4,7 +4,7 @@ pubDatetime: 2023-02-19T10:53:55+07:00
 title: "Trò đùa của sự ngẫu nhiên - Taleb - Phần 2"
 postSlug: ""
 featured: false
-draft: true
+draft: false
 tags:
   - review
   - books
@@ -27,3 +27,5 @@ Một câu chuyện hay được lấy làm ví dụ, khi cho vô hạn con kh�
 Hồ sơ thành tích của con khỉ, quả thật rất ấn tượng, nhưng bạn có thể phải chờ hết cả tuổi của hệ Mặt trời mà nó vẫn chưa viết được bản sử thi thứ 2.
 
 ### 8. Quá nhiều triệu phú nhà bên
+
+Ưu điểm của chủ nghĩa tư bản nằm ở chỗ xã hội có thể thu lợi từ lòng tham thay vì lòng nhân từ của con người.
