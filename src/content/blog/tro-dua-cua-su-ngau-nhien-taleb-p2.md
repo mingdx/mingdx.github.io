@@ -12,7 +12,7 @@ ogImage: ""
 description: "Một chút xíu kiến thức về xác suất có thể dẫn đến những kết quả tệ hại hơn rất nhiều so với việc không hề biết gì về xác suất."
 ---
 
-Tiếp tục với [phần 1](trò-đùa-của-sự-ngẫu-nhiên---taleb), mặc dù mới qua 1 nửa cuốn sách nhưng chỉ còn 1/3 số lượng highlight. Tôi tự hỏi, liệu rằng do tác giả bắt đầu cạn ý tưởng hay do tôi đọc nửa cuốn sau hời hợt. 
+Tiếp tục với [phần 1](../trò-đùa-của-sự-ngẫu-nhiên---taleb), mặc dù mới qua 1 nửa cuốn sách nhưng chỉ còn 1/3 số lượng highlight. Tôi tự hỏi, liệu rằng do tác giả bắt đầu cạn ý tưởng hay do tôi đọc nửa cuốn sau hời hợt. 
 
 ## Table of contents
 
