@@ -35,3 +35,5 @@ Hai sai sót trong mẫu nghiên cứu, khi chỉ đề cập tới:
 - Khung thời gian giới hạn trong 1 giai đoạn, là lúc thị trường bò. Đây cũng là một nhân tố góp phần sự thành công nhưng lại bị _thói quen X_ lấy hết công trạng.
 
 > Thông tin trong quá khứ với phép quy nạp rút ra nguyên nhân thành công cần xem xét lại: <mark>(i) hình mẫu thất bại </mark> và <mark>(ii) những nguyên nhân khác  </mark>
+
+
