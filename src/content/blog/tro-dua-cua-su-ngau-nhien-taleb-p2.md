@@ -90,6 +90,8 @@ ___
 > Cùng lắm thì bạn có thể quyết định rằng bạn có thể (tương đối) nghèo, nhưng được tự do về thời gian, hoặc
 trở nên giàu có nhưng lại phụ thuộc như một nô lệ.... Tôi xin nhắc lại rằng tổ tiên của chúng ta không hề chịu ảnh hưởng từ dàn bài, lịch trình hay những hạn cuối.
 
+Tôi ước rằng có thể đọc được kết luận này sớm hơn, để rời bỏ bản tính thích tối ưu mọi thứ trong khi đang lãng phí thời gian và nguồn cơn hạnh phúc của chính mình, trong nhiều vấn để.
+
 > Một mức độ khó đoán nhẹ nhàng trong hành vi của bản thân có thể giúp bảo vệ chính bạn trong những tình huống xung đột. Ví dụ, bạn luôn luôn có một ngưỡng phản ứng giống nhau. Bạn đặt ra một ngưỡng lạm dụng, chẳng hạn 17 nhận định sỉ nhục một tuần, trước khi bạn nổi điên và đấm vào mặt kẻ thứ 18. Tính chất có thể dự đoán kiểu như thế này sẽ cho phép người khác lợi dụng bạn cho đến điểm bùng phát đã được biết trước và dừng lại ở đó. Nhưng nếu bạn ngẫu nhiên hóa điểm bùng phát của mình, đôi lúc phản ứng quá mạnh với chỉ một trò đùa nhỏ nhất, **người khác sẽ không biết chi tiết về việc họ có thể đẩy bạn đi được bao xa.**
 
 Điểm ngẫu nhiên hóa này, theo tôi là một trong những quy tắc của lý thuyết trò chơi mà tôi sẽ tìm hiểu trong thời gian tới.
