@@ -163,7 +163,7 @@ ggplot(ipsos, aes(x=Percent, y=Country)) +
 
 
     
-![png](output_6_0.png)
+![png](/assets/01-Bar-chart-simple/output_6_0.png)
     
 
 
@@ -217,7 +217,7 @@ p1
 
 
     
-![png](output_8_0.png)
+![png](/assets/01-Bar-chart-simple/output_8_0.png)
     
 
 
@@ -233,7 +233,7 @@ p1
 
 
     
-![png](output_9_0.png)
+![png](/assets/01-Bar-chart-simple/output_9_0.png)
     
 
 
@@ -255,7 +255,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_10_0.png)
+![png](/assets/01-Bar-chart-simple/output_10_0.png)
     
 
 
@@ -288,7 +288,7 @@ ggplot() +
 
 
     
-![png](output_11_0.png)
+![png](/assets/01-Bar-chart-simple/output_11_0.png)
     
 
 
@@ -313,7 +313,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_12_0.png)
+![png](/assets/01-Bar-chart-simple/output_12_0.png)
     
 
 
@@ -336,7 +336,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_13_0.png)
+![png](/assets/01-Bar-chart-simple/output_13_0.png)
     
 
 
@@ -358,7 +358,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_14_0.png)
+![png](/assets/01-Bar-chart-simple/output_14_0.png)
     
 
 
@@ -414,7 +414,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_16_0.png)
+![png](/assets/01-Bar-chart-simple/output_16_0.png)
     
 
 
@@ -444,7 +444,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_18_0.png)
+![png](/assets/01-Bar-chart-simple/output_18_0.png)
     
 
 
@@ -479,7 +479,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
     
-![png](output_19_0.png)
+![png](/assets/01-Bar-chart-simple/output_19_0.png)
     
 
 
@@ -488,13 +488,11 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 ggsave("6.1.1 Bar Chart Simple.svg", last_plot(), device=svg, width = 20, height = 12, units="cm")
 ```
 
-**Final result**
-
-!AWESOME!!
-![image.png](attachment:image.png)
-
-
 ```R
 ggsave("6.1.1 Bar Chart Simple.png", last_plot(), device=png, width = 20, height = 12, units="cm", bg="white")
 ```
 
+**Final result**
+
+**!AWESOME!** *(below image is in svg type, so you can open it in a separate tab and zoom it in)*
+![Bar Chart Simple](/assets/01-Bar-chart-simple/Bar_Chart_Simple.svg)
