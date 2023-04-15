@@ -489,3 +489,73 @@ ggsave("6.1.1 Bar Chart Simple.png", last_plot(), device=png, width = 20, height
 
 **!AWESOME!** *(below image is in svg type, so you can open it in a separate tab and zoom it in)*
 ![Bar Chart Simple](/assets/01-Bar-chart-simple/Bar_Chart_Simple.svg)
+
+## Debugging error
+Thật là mệt mỏi khi phải gọi `ipsos` ở mỗi geom, nguyên nhân vì nếu để dataset ở plot (ggplot), thì ở `geom_rect` sẽ xuất hiện lỗi:
+```
+! Problem while computing aesthetics.
+ℹ Error occurred in the 1st layer.
+Caused by error in `FUN()`:
+! object 'Percent' not found
+```
+Vấn đề này gây ra bởi geom_rect sẽ kế thừa (inherit) aesthetics từ plot (cụ thể là ipsos) rồi mới bắt đầu tính toán/mapping aes của bg_rect. Có 2 cách xử lý, ở đây chọn cách số 2:
+- [ ] set lại mapping x=NULL, y=NULL trước khi mapping vào bg_rect dataframe
+- [x] thêm para: `inherit.aes = FALSE`
+
+Tuy nhiên vấn đề lại xuất hiện khi add thêm các layer geom sau geom_rect này, lỗi:
+```
+ERROR while rich displaying an object: Error: Discrete value supplied to continuous scale
+```
+
+Tham khảo [How To Fix The R Error: discrete value supplied to continuous scale](https://www.programmingr.com/r-error-messages/discrete-value-supplied-to-continuous-scale/) thì lỗi này gây nên **có thể** do:
+- Ở plot đầu tiên - layer 0, `y = Country` là mapping y với một discrete value (ở đây là factor, thông qua fct_reorder)
+- Ở layer geom_rect thứ 2, việc vẽ rectangle hoặc một đoạn thẳng với xmin/ymin to xmax/ymax khiến axis y trở thành **continuous scale**
+- Tiếp tục ở layer thứ 3, nếu thêm geom_col, hoặc chỉ cần geom_point, data được inherit từ plot - layer 0, vốn vẫn là **discrete** cho biến y, nhưng lại *"supplied"* cho axis y hiện đã là *continous*
+- Giải pháp cần phải sửa ymin & ymax thành discrete để bảo toàn tính chất của y-axis
+- Cụ thể sẽ set `ymin=ipsos$Country[1]` là phần tử đầu tiên, `ymax = Country[length(Country)])` là phần tử cuối cùng của `Country`. (Lý do vì sao dùng `x[length(x)]` để gọi phần tử cuối cùng, tham khảo [stackoverflow](https://stackoverflow.com/questions/77434/how-to-access-the-last-value-in-a-vector). Thật kỳ lạ là không thể gọi x[-1] như python)
+- Trong R, nếu gọi `c[-1]` sẽ trả về vector c() **bỏ** đi phần tử thứ 1
+
+Nhìn lại thì dataframe `bg_rect` rõ ràng có thể tính toán và gọi từ ipsos, ngay từ đầu khi tìm hiểu tôi đã bị đi sai theo hướng của [bài post này](https://rpubs.com/chidungkt/392980). Tham khảo thêm [nguồn này](https://stackoverflow.com/questions/43511416/how-do-you-control-the-translucence-of-geom-rect-rectangles) thì thấy cách dùng annotate cho các layer không liên quan tới data là hay nhất.
+
+Đồng thời phát hiện ra việc set `ymin/max` thành `+-Inf` không làm thay đổi thuộc tính *discrete/continuous* của y-axis
+
+Sửa lại:
+
+```r
+ggplot(ipsos, aes(x=Percent, y=Country)) +
+    annotate("rect", xmin=seq(0,80,20), xmax=seq(20,100,20),
+                  ymin = -Inf,  ymax = +Inf, fill=rep(c("#e8f7fc", "#def5fc"), length.out = 5)) +
+    geom_col()
+```
+    
+![png](/assets/01-Bar-chart-simple/output_4_0.png)
+
+
+## FINAL OF FINAL
+Here is my final version, which looks cleaner than the previous one.
+
+```r
+#Try my plot in the neat way
+ggplot(ipsos, aes(x=Percent, y=Coulab)) +
+    geom_col(fill="black") +
+    annotate("rect", xmin=seq(0,80,20), xmax=seq(20,100,20),
+                  ymin = -0.5,  ymax = +17, fill=rep(c("#e8f7fc", "#def5fc"), length.out = 5), alpha=0.8) +
+    geom_col(aes(fill=ifelse(Country %in% c("Brazil", "Germany"), "Highlight", "Normal")), show.legend = F) +
+    scale_fill_manual(values=c("Highlight"="#ff00d2","Normal"="NA")) +
+    geom_segment(aes(x=45, y=-1.5, xend=45, yend=+18), color="#6ca6cd", linewidth=0.5) +
+    annotate("text", x=44, y=17.5, label="Average 45", size=2, hjust=1, fontface="italic") +
+    annotate("text", x=100, y=17.5, label="All values in percent", size=2, hjust=1, fontface="italic") +
+    scale_x_continuous(breaks = seq(0, 100, 20)) +
+    scale_y_discrete() +
+    labs(x=NULL, y=NULL,
+         title="'I Definitely Believe in God or a Supreme Being'",
+         subtitle="was said in 2010 in:",
+         caption="Source: www.ipsos-na.com, Design: Stefan Fichtel, ixtract") +
+    theme(axis.text.y = element_text(face = ifelse(levels(ipsos$Coulab) == "Germany 27", "bold", "plain")),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          text = element_text(family="Lato"),
+          plot.title = element_text(family="Lato Black"),
+          plot.caption = element_text(face="italic"),
+          )
+```
