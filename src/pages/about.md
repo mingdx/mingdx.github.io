@@ -15,6 +15,12 @@ title: "About"
 
 ## Courses
 
+| No  | Course                                                                                                         | Length  | Status |
+| --- | -------------------------------------------------------------------------------------------------------------- | ------- | ------ |
+|     | **2023**                                                                                                       |         |        |
+| 1   | [**Learn ggplot2 in R for Data Visualization**](https://www.udemy.com/course/learn-ggplot2-in-r-for-data-viz/) | 10.5hrs | ✅     |
+|     |                                                                                                                |         | ⌛     |
+
 =======
 
 # Exams

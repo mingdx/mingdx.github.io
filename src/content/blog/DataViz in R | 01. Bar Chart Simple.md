@@ -38,8 +38,6 @@ TL;DR:
 10. How to use ggsave(): remove quotation mark in `device` does the magic (if not, font will be inappropriately rendered), specify w x h with unit of measure
 
 
-    
-
 ## Target result
 
 http://www.datavisualisation-r.com/pdf/barcharts_simple.pdf
