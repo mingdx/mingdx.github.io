@@ -62,13 +62,13 @@ Arabia, South Africa, South Korea, Sweden, Russia, and Turkey, where the sample
 size was approximately 500.
 
 Load các library cần thiết
-```R
+```r
 library(ggplot2)
 library(viridis)
 library(dplyr)
 theme_set(theme_minimal()) 
 
-```R
+```r
 #Import data from excel file with lib readxl
 library(readxl)
 ipsos <- read_excel("./myData/ipsos.xlsx")
@@ -105,7 +105,7 @@ ipsos
 
 
 
-```R
+```r
 #Add thêm label thẳng vào dataframe để tránh việc gọi dataset nhiều lần
 #Do ở dưới lúc đầu mapping y vào Country, sau lại để là Coulab nên fct_reorder 2 lần
 library(forcats)
@@ -116,8 +116,6 @@ ipsos <- ipsos %>%
     mutate(Country=fct_reorder(Country, Percent))
 ipsos
 ```
-
-
 <table class="dataframe">
 <caption>A tibble: 16 × 3</caption>
 <thead>
@@ -147,12 +145,12 @@ ipsos
 
 
 
-```R
+```r
 options(repr.plot.width=10, repr.plot.height=6)
 ```
 
 
-```R
+```r
 # Đầu tiên sẽ vẽ bar plot với highlight bar cho Brazil + Germany
 # Tham khảo https://stackoverflow.com/questions/54103496/using-a-different-color-for-only-the-selected-bar-in-geom-bar
 
@@ -168,7 +166,7 @@ ggplot(ipsos, aes(x=Percent, y=Country)) +
 
 
 
-```R
+```r
 #Vẽ back ground màu đan xen theo trục x
 #Tìm hiểu nhiều chỗ thì chỉ có 1 cách là vẽ đè thêm sử dụng geom_rect()
 #Tuy nhiên nhìn kĩ màu sẽ thấy 2 bar highlighted pop up hẳn lên, còn background và normal bar sẽ hòa màu
@@ -199,7 +197,7 @@ bg_rect
 
 
 
-```R
+```r
 #do data vẽ geom_rect khác với geom_col nên phải tách data về từng layer thay vì để chung ở plot ggplot()
 #Tiếp tục tìm cách vẽ geo_col cho riêng 2 bar của Brazil và Germany
 
@@ -222,7 +220,7 @@ p1
 
 
 
-```R
+```r
 #Vẽ line average, một bài viết sử dụng geom_hline() nhưng không giống lắm
 #Thử nghiệm geom_segment với type arrow thử
 
@@ -238,7 +236,7 @@ p1
 
 
 
-```R
+```r
 #Sửa label của y axis và x axis
 #Dùng scale_y_discrete để control là gọn, tuy nhiên không control được thứ tự factor xuất hiện như dưới
 #Đồng thời cũng khó để control việc bolder 1 element riêng biệt
@@ -260,7 +258,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 #Fixed lỗi thứ tự xuất hiện của label
 #Tham khảo: https://stackoverflow.com/questions/69678086/using-scale-y-discrete-to-include-variables-in-label-names-reorders-labels-wit
 #Lý do: original data.frame is out of sync with what the discrete scale perceives to be the order
@@ -293,7 +291,7 @@ ggplot() +
 
 
 
-```R
+```r
 #Do đó sẽ sử dụng geom_text
 #Nhưng không hiểu vì sao text lại bị hide đi rất kỳ lạ
 #Lý do là geom_text vẽ ở vùng ngoài của plot, nên cần phải tăng plot margin lên
@@ -318,7 +316,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 #Trong version trên chú ý label China 9 trông không được cân đối
 #Xử lý bằng cách format lại số percent cho đồng nhất 2 ký tự
 #Nhưng do font không phải dạng mono nên dù có add space vào trước trông vẫn lệch
@@ -341,7 +339,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 #Quay về với cách trông không sạch sẽ cho lắm là add 2 layer geom_text
 
 p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
@@ -363,7 +361,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 ipsos <- mutate(ipsos,
                 highlight_text=ifelse(Country == "Germany", "bold", "plain"))
 ipsos
@@ -399,7 +397,7 @@ ipsos
 
 
 
-```R
+```r
 p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
     geom_text(data=ipsos, mapping=aes(x=-7, y=Country, label=Country, fontface=highlight_text), size=4, hjust=1) +
     geom_text(data=ipsos, mapping=aes(x=-3, y=Country, label=Percent, fontface=highlight_text), size=4, hjust=1) +
@@ -419,7 +417,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 #Thử nghiệm thay đổi font
 library(extrafont)
 loadfonts(device = "win")
@@ -449,7 +447,7 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 #Add chú thích vào 1 chỗ nếu dùng geom_text khá costly bộ nhớ
 #Và phải thêm 1 điểm vào data.frame riêng
 #Thông thường nên dùng annotate()
@@ -484,11 +482,11 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 
-```R
+```r
 ggsave("6.1.1 Bar Chart Simple.svg", last_plot(), device=svg, width = 20, height = 12, units="cm")
 ```
 
-```R
+```r
 ggsave("6.1.1 Bar Chart Simple.png", last_plot(), device=png, width = 20, height = 12, units="cm", bg="white")
 ```
 
