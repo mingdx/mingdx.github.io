@@ -42,8 +42,6 @@ TL;DR:
 
 ## Target result
 
-![image.png](attachment:image.png)
-
 http://www.datavisualisation-r.com/pdf/barcharts_simple.pdf
 
 The ﬁgure shows the results of a 2010 survey carried out in different countries:
@@ -67,6 +65,7 @@ library(ggplot2)
 library(viridis)
 library(dplyr)
 theme_set(theme_minimal()) 
+```
 
 ```r
 #Import data from excel file with lib readxl

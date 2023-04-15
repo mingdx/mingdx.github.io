@@ -93,6 +93,12 @@
     @apply hidden;
   }
 
+  .dataframe {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: monospace;
+  }
+
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;
