@@ -75,7 +75,7 @@ ipsos
 ```
 
 
-<table class="dataframe">
+<table class="dataframe not-prose">
 <caption>A tibble: 16 × 2</caption>
 <thead>
 	<tr><th scope=col>Country</th><th scope=col>Percent</th></tr>
@@ -115,7 +115,7 @@ ipsos <- ipsos %>%
     mutate(Country=fct_reorder(Country, Percent))
 ipsos
 ```
-<table class="dataframe">
+<table class="dataframe not-prose">
 <caption>A tibble: 16 × 3</caption>
 <thead>
 	<tr><th scope=col>Country</th><th scope=col>Percent</th><th scope=col>Coulab</th></tr>
@@ -178,7 +178,7 @@ bg_rect
 ```
 
 
-<table class="dataframe">
+<table class="dataframe not-prose">
 <caption>A data.frame: 5 × 3</caption>
 <thead>
 	<tr><th scope=col>start</th><th scope=col>end</th><th scope=col>color</th></tr>
@@ -221,7 +221,7 @@ p1
 
 ```r
 #Vẽ line average, một bài viết sử dụng geom_hline() nhưng không giống lắm
-#Thử nghiệm geom_segment với type arrow thử
+#Thử nghiệm geom_segment đơn giản
 
 p1 <- p1 + geom_segment(aes(x=45, y=-1, xend=45, yend=18), 
                   color="#6ca6cd", linewidth=0.5)
@@ -361,13 +361,14 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
 
 
 ```r
+#Mapping aes fontface bold cho Germany nhanh gọn hơn bằng cách tạo thêm cột trong dataframe
 ipsos <- mutate(ipsos,
                 highlight_text=ifelse(Country == "Germany", "bold", "plain"))
 ipsos
 ```
 
 
-<table class="dataframe">
+<table class="dataframe not-prose">
 <caption>A tibble: 16 × 4</caption>
 <thead>
 	<tr><th scope=col>Country</th><th scope=col>Percent</th><th scope=col>Coulab</th><th scope=col>highlight_text</th></tr>
@@ -443,9 +444,6 @@ p1 + scale_x_continuous(breaks = seq(0, 100, 20)) +
     
 ![png](/assets/01-Bar-chart-simple/output_18_0.png)
     
-
-
-
 ```r
 #Add chú thích vào 1 chỗ nếu dùng geom_text khá costly bộ nhớ
 #Và phải thêm 1 điểm vào data.frame riêng
@@ -489,7 +487,7 @@ ggsave("6.1.1 Bar Chart Simple.svg", last_plot(), device=svg, width = 20, height
 ggsave("6.1.1 Bar Chart Simple.png", last_plot(), device=png, width = 20, height = 12, units="cm", bg="white")
 ```
 
-**Final result**
+## Final result
 
 **!AWESOME!** *(below image is in svg type, so you can open it in a separate tab and zoom it in)*
 ![Bar Chart Simple](/assets/01-Bar-chart-simple/Bar_Chart_Simple.svg)
