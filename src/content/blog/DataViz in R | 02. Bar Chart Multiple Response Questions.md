@@ -19,8 +19,6 @@ Tiếp tục với series, bài thứ 2: Bar chart for multiple response questio
 
 ## Target result
 
-![image.png](attachment:image.png)
-
 www.datavisualisation-r.com/pdf/barcharts_multiple.pdf
 
 The study has been conducted since the early 1980s and is repeated every 9 years. Aside from a series of questions
@@ -160,10 +158,6 @@ ggplot(gender_role, aes(x=Percent, y=Response)) +
 
 bar_mulres
 ```
-
-    Warning message:
-    "[1m[22mVectorized input to `element_text()` is not officially supported.
-    [36mℹ[39m Results may be unexpected or may change in future versions of ggplot2."
 
 ![png](/assets/02-Bar-chart-multi/output_7_1.png)
 
