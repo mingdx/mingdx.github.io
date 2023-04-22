@@ -73,7 +73,7 @@ gender_role <- data.frame(Resno = seq(1,7,1),
 gender_role
 ```
 
-<table class="dataframe">
+<table class="dataframe not-prose">
 <caption>A data.frame: 7 × 3</caption>
 <thead>
 	<tr><th scope=col>Resno</th><th scope=col>Response</th><th scope=col>Percent</th></tr>
